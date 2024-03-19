@@ -1,1 +1,8 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The vulnerabilites in the code wer that the document's cookies could be read programatically and that sessions did not check the origin of requests so a csrf attack could be performed. The secure version revents these attacks by setting httpOnly and sameSite to be true. Furthermore, the secret parameter used to generate the key is changed to a seret value to prevent a bruteforce attack to try and guess the session id. 
+
+
+Which CIA properties do you think Spoofing violates? 
+
+Confidentiality and availability are violated in a spoofing attack. confidentiality is violated because sensitive information is being revealed to a hijaker when they steal a user's account. Availability is being violated because unauthorized users could send the /sensitive post request sucessfully, which should only be available to admin users. 
