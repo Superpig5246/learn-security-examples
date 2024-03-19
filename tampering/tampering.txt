@@ -1,0 +1,7 @@
+Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The input from the user is not sanitized, so if the user inputted javascript code as their username, when the server sends a response to "/", the javascript code would be excecuted, giving a malicious user potential control over the client's application. The secure version prevents this vulnerability by sanitizing the username input by calling escapeHTML on the user's input which replaces special characters with string equivalents. 
+
+Which CIA property does tampering violate?
+
+Tampering violate integrity because the attack causes an unintended action by changing data througha  rogue script.
