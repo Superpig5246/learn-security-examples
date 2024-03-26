@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
+
+The vulnerability is that the insecure file does not have sufficient logging. That is to say, the server does not keep explicit track of which users sent which requests, so there is no way to prove that a given user performed some action. Conversely, the secure version adds middlewhere that logs the time stamp and user for every action. 
+
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+To increase security, you could also keep the logs in a distrobuted database with a potential cache, add more information to the log, and implement an audit policy to flag potentialy suspicious requests. 
