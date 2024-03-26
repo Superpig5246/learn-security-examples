@@ -1,3 +1,13 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
-Which CIA property does tampering violate?
+
+The insecure version performs a mongoose querry using unsanatized user input which is vulneratble to a noSQL injection. This would allow a malicious user to get all the passwords for every user. The secure version prevents the vulnerability by ensuring that the input is a string and sanatizing the input. 
+
+
+Which CIA property does info discloser violate?
+
+This attack violates confidentiality because all user data could be gathered by a malicious user.  
+
+
 What additional security mechanisms can you incorporate?
+
+In addition to the current security measures, we should encrypt the users passwords when sending it between the client and the server.

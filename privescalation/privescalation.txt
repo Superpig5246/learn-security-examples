@@ -1,0 +1,8 @@
+Briefly explain the vulnerability and why the secure version prevents the vulnerability
+
+The vulnerability here is that any user can change the role of an admin by sending an admin's id to the server. This is because the server does not check the id of the user that sent the request but instead the id that they sent. To prevent this, the secure version uses a session to verify that the request is coming from a user. 
+
+
+What additional security mechanisms can you incorporate to prevent such attacks?
+
+Additionally, you could implement two factor authentification and not hardcoding the session secret key.

@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The insecure code does not validate or sanitize the inputted id in any way, so if a user were to repeatedly send the server invalid ids, they could creash the server, resulting in a denial of service. The secure version adds a try catch around the database querry to ensure that if something goes wrong in the querry, the error is gracefully handeled instead of allowing the server to crash. 
+
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Additionally, we could sanatize the user input and implement rate limiting to prevent malicious users from spamming the server with requests.
